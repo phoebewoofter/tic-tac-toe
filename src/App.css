@@ -6,18 +6,11 @@ html, body {
 }
 
 /* Instead of applying background to every element, assign it to body */
-body {
+html, body {
   font-family: sans-serif;
   /* Radial gradient applied once across the whole page */
-  background: radial-gradient(circle at center, 
-    rgb(208, 159, 233) 40%, 
-    rgb(184, 114, 218) 30%, 
-    rgb(167, 83, 210) 30%);
-  background-repeat: no-repeat;
-  background-size: cover;  /* Ensures the gradient covers the viewport */
-  /* You can also include background-attachment: fixed; if desired */
+  background-color:rgb(194, 118, 201);
 }
-
 /* General element styles */
 * {
   box-sizing: border-box;
@@ -90,6 +83,9 @@ body {
 
 .status {
   margin-bottom: 10px;
+  font-family: 'Arial';
+  font-size: 16px;
+  letter-spacing: 3px;
 }
 
 .game {
@@ -102,12 +98,51 @@ body {
 }
 
 .play-again {
-  padding: 20px;
+    width: 100px;
+    height: 50px;
+    background: rgb(171, 81, 179);
+    text-decoration: none;
+    text-align: left;
+    padding-left: 20px;
+    transform: rotate(-30deg) skew(25deg) translate(0, 0);
+    box-shadow: -20px 20px 10px rgb(69, 15, 96);
+    font-family: 'Arial';
+    font-size: 16px;
+    letter-spacing: 4px;
+    border: none;
+    color: whitesmoke;
+    margin-top: 20vh;
+}
+
+.play-again::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 20px;
+  background: darkorchid;
+  top: 10px;
+  left: -20px;
+  transform: rotate(0deg) skewY(-45deg);
+}
+
+.play-again::after {
+  content: '';
+  position: absolute;
+  height: 28.5px;
+  width: 71%;
+  background: darkorchid;
+  bottom: -24px;
+  left: 4.5px;
+  transform: rotate(45deg) skewY(-45deg);
+}
+
+.play-again:hover {
+  transform: rotate(-30deg) skew(25deg) translate(20px, -15px);
+  box-shadow: -50px 50px 50px rgb(69, 15, 96);
 }
 
 .board {
-  margin: auto;
-  width: 35vw;
+  position: relative; 
 }
 
 .tile {

@@ -16,7 +16,7 @@ function Square({ value, onSquareClick }) {
 function PlayAgain({ onButtonClick }) {
  
     return (
-    <button onClick={onButtonClick}>
+    <button className="play-again" onClick={onButtonClick}>
       Play Again
     </button>
     );
@@ -98,7 +98,7 @@ export default function Board() {
           <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
           <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
         </div>
-        <div className="play-again">
+        <div>
           {(calculateWinner(squares)) || (noWinner.length === 9) ?
           <PlayAgain onButtonClick={reset}/>
           :
