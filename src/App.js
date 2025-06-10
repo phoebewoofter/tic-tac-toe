@@ -1,5 +1,6 @@
 
 import { useState } from 'react';
+import './App.css';
 
 function Square({ value, onSquareClick }) {
   return ( 
@@ -23,10 +24,10 @@ function PlayAgain({ onButtonClick }) {
 
   function TicTacToe({ pageLoad, play }) {
     return (
-      <div onLoad={pageLoad}>
-        <h1><span>Tic</span> <span></span>Tac<span> </span>Toe</h1>
+      <div className="welcome-page" onLoad={pageLoad}>
+        <h1 className="tic-tac-toe-title"><span className="title-word">Tic</span> <span className="title-word">Tac</span><span className="title-word">Toe</span></h1>
 
-        <button onClick={play}>Play</button>
+        <button className="tile" onClick={play}>PLAY</button>
       </div>
     );
   }
