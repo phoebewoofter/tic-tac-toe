@@ -60,26 +60,43 @@ body {
 }
 
 /* The rest of your component-related styles */
+/* Style for each individual square */
 .square {
-  background: #fff;
+  /* Use a subtle gradient to give a sense of depth */
+  background: linear-gradient(to bottom, #fff, #e0e0e0);
+  
+  /* A light border and gentle rounding */
   border: 1px solid #999;
+  border-radius: 10px; /* barely rounded edges */
+
+  /* A subtle box shadow for a 3D effect */
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  
+  /* Layout properties to position the squares (assumes a 3x3 grid) */
   float: left;
   font-size: 24px;
   font-weight: bold;
-  line-height: 20px;
-  height: 34px;
+  line-height: 34px;
+  height: 60px;
+  width: 60px;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 34px;
 }
 
+/* Clear floats after each row if you’re not using Flexbox */
 .board-row:after {
-  clear: both;
   content: '';
   display: table;
+  clear: both;
 }
+
+/* Optional: Style the entire board container for visual cohesion */
+.board {
+  position: relative;
+}
+
 
 .status {
   margin-bottom: 10px;
@@ -139,10 +156,6 @@ body {
 .play-again:hover {
   transform: rotate(-30deg) skew(25deg) translate(20px, -15px);
   box-shadow: -50px 50px 50px rgb(69, 15, 96);
-}
-
-.board {
-  position: relative; 
 }
 
 .tile {
